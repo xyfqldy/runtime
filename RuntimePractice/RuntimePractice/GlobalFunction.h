@@ -61,9 +61,9 @@ void methodMapNewImp(Class class,SEL originalselctor,IMP newImp)
     Method originalMethod = class_getInstanceMethod(class,originalselctor);
     gOriginalViewDidAppear = (void *) method_getImplementation(originalMethod);
     //如果该类中就有这个方法的话，就直接调换这个方法的imp
-    
-    if(!class_addMethod(class, originalselctor, (IMP) newViewDidAppear, method_getTypeEncoding(originalMethod))) {
-        method_setImplementation(originalMethod, (IMP) newViewDidAppear);
+//   (IMP) newViewDidAppear//本身就是IMP，函数指针咯
+    if(!class_addMethod(class, originalselctor, newImp, method_getTypeEncoding(originalMethod))) {
+        method_setImplementation(originalMethod, newImp);
     }else{//如果这个类中没有这个方法的话，那么添加是会成功的，添加成功，这样就避免了更换了其父类方法实现的情况
     //1.可以再获取一次本类的方法，再替换IMP
 //        Method originalMethod = class_getInstanceMethod(class,originalselctor);

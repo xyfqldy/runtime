@@ -2,7 +2,7 @@
 //  Test1ViewController.m
 //  RuntimePractice
 //
-//  Created by I_MT on 16/9/8.
+//  Created by I_MT on 16/9/9.
 //  Copyright © 2016年 I_MT. All rights reserved.
 //
 
@@ -17,12 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

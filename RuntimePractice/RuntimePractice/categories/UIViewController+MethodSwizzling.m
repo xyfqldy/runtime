@@ -8,6 +8,7 @@
 
 #import "UIViewController+MethodSwizzling.h"
 #import <objc/runtime.h>
+#import "GlobalFunction.h"
 
 @implementation UIViewController (MethodSwizzling)
 /**
@@ -74,7 +75,7 @@
 #pragma mark MTQ:***?????
 
 //    self.view.backgroundColor=[UIColor whiteColor];
-    NSLog(@"viewWillAppear: %@", self);
+//    NSLog(@"viewWillAppear: %@", self);
     if (self.navigationController) {//修改rightButtonItem
     
         UIBarButtonItem *rightItem = self.navigationItem.rightBarButtonItem ;
@@ -89,6 +90,16 @@
     
 }
 -(void)xxx_viewDidload{
-    
+#pragma mark MTQ:***?????这里多出来了个控制器！！！
+
+    Class UIInputWindowControllerClass = NSClassFromString(@"UIInputWindowController");
+    if ([self isKindOfClass:UIInputWindowControllerClass]) {
+//        self.view.backgroundColor=[UIColor whiteColor];
+ 
+    }else{
+    self.view.backgroundColor=[UIColor whiteColor];
+    }
+    NSLog(@"viewWillDidload: %@", self);
+
 }
 @end

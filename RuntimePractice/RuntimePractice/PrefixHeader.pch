@@ -9,11 +9,10 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "GlobalFunction.h"
+//#import "GlobalFunction.h"
 
 #import "XHPathCover.h"
 #import "Test1ViewController.h"
-#import "Test1SecondVC.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

@@ -1,18 +1,18 @@
 //
-//  Test1SecondVC.m
+//  Test2ViewController.m
 //  RuntimePractice
 //
-//  Created by I_MT on 16/9/8.
+//  Created by I_MT on 16/9/9.
 //  Copyright © 2016年 I_MT. All rights reserved.
 //
 
-#import "Test1SecondVC.h"
+#import "Test2ViewController.h"
 
-@interface Test1SecondVC ()
+@interface Test2ViewController ()
 
 @end
 
-@implementation Test1SecondVC
+@implementation Test2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
