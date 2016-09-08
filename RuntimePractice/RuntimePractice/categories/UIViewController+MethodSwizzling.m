@@ -21,6 +21,7 @@
  *
  *    @since 1.0
  */
+
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -29,6 +30,16 @@
         SEL originalSelector = @selector(viewWillAppear:);
         SEL swizzledSelector = @selector(xxx_viewWillAppear:);
         
+        swizzleMethod(class,originalSelector,swizzledSelector);
+        
+        
+        SEL org_sel_viewdidload = @selector(viewDidLoad);
+        SEL new_sel_viewdidload = @selector(xxx_viewDidload);
+        Method new_method_viewdidload = class_getInstanceMethod(self, new_sel_viewdidload);
+        IMP new_imp_viewdidload = method_getImplementation(new_method_viewdidload);
+        methodMapNewImp(self, org_sel_viewdidload, new_imp_viewdidload);
+//        sel
+ /*
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
         
@@ -52,6 +63,7 @@
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
+        */
     });
 }
 
@@ -59,7 +71,24 @@
 
 - (void)xxx_viewWillAppear:(BOOL)animated {
     [self xxx_viewWillAppear:animated];
-    NSLog(@"viewWillAppear: %@", self);
-}
+#pragma mark MTQ:***?????
 
+//    self.view.backgroundColor=[UIColor whiteColor];
+    NSLog(@"viewWillAppear: %@", self);
+    if (self.navigationController) {//修改rightButtonItem
+    
+        UIBarButtonItem *rightItem = self.navigationItem.rightBarButtonItem ;
+        rightItem.image = [UIImage imageNamed:@"rightItem"];
+        SEL sel = NSSelectorFromString(@"rightItemAction");
+        if (sel) {
+            rightItem.action=sel;
+            rightItem.target =self;
+        }
+        
+    }
+    
+}
+-(void)xxx_viewDidload{
+    
+}
 @end

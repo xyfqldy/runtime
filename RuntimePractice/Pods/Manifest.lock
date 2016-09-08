@@ -1,0 +1,12 @@
+PODS:
+  - PathCover (0.1.2)
+
+DEPENDENCIES:
+  - PathCover
+
+SPEC CHECKSUMS:
+  PathCover: 2cea41d7c2a315d72827a35e984ba65b67c1eafc
+
+PODFILE CHECKSUM: 3e76dc0ceca7d6f6827d618ed8d5d1c0a4da35c4
+
+COCOAPODS: 1.0.1
