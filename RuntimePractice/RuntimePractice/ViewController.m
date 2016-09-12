@@ -19,10 +19,12 @@
     NSArray *sources;
 }
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     [self addTableView];
     [self addPathCover];
     [self initSources];
+    
 }
 -(void)addTableView{
     self.tablview=[[UITableView alloc]initWithFrame:self.view.bounds];

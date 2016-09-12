@@ -10,6 +10,8 @@
 		2C831FA30C7CF22A5127D256 /* libPods-RuntimePractice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F413FA19EB1AD38507811EF /* libPods-RuntimePractice.a */; };
 		5200895D1D81F5DE00EBB4C6 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200895C1D81F5DE00EBB4C6 /* Test2ViewController.m */; };
 		520089601D81FA2A00EBB4C6 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200895F1D81FA2A00EBB4C6 /* Test1ViewController.m */; };
+		52008A071D872B0500EBB4C6 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52008A061D872B0500EBB4C6 /* NSObject+KVO.m */; };
+		52008A0A1D872B2000EBB4C6 /* NSObject+mt_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52008A091D872B2000EBB4C6 /* NSObject+mt_KVO.m */; };
 		5221CE031D7F69DA0024653A /* UIViewController+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5221CE021D7F69DA0024653A /* UIViewController+MethodSwizzling.m */; };
 		522779D41D7EB984006C9D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522779D31D7EB984006C9D94 /* main.m */; };
 		522779D71D7EB984006C9D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522779D61D7EB984006C9D94 /* AppDelegate.m */; };
@@ -48,6 +50,10 @@
 		5200895C1D81F5DE00EBB4C6 /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 		5200895E1D81FA2A00EBB4C6 /* Test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
 		5200895F1D81FA2A00EBB4C6 /* Test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
+		52008A051D872B0500EBB4C6 /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		52008A061D872B0500EBB4C6 /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		52008A081D872B2000EBB4C6 /* NSObject+mt_KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+mt_KVO.h"; sourceTree = "<group>"; };
+		52008A091D872B2000EBB4C6 /* NSObject+mt_KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+mt_KVO.m"; sourceTree = "<group>"; };
 		5221CE011D7F69DA0024653A /* UIViewController+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MethodSwizzling.h"; sourceTree = "<group>"; };
 		5221CE021D7F69DA0024653A /* UIViewController+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MethodSwizzling.m"; sourceTree = "<group>"; };
 		522779CF1D7EB984006C9D94 /* RuntimePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,11 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52008A0B1D872B4400EBB4C6 /* 动手实现KVO */ = {
+			isa = PBXGroup;
+			children = (
+				52008A081D872B2000EBB4C6 /* NSObject+mt_KVO.h */,
+				52008A091D872B2000EBB4C6 /* NSObject+mt_KVO.m */,
+				52008A051D872B0500EBB4C6 /* NSObject+KVO.h */,
+				52008A061D872B0500EBB4C6 /* NSObject+KVO.m */,
+			);
+			name = "动手实现KVO";
+			sourceTree = "<group>";
+		};
 		5221CE001D7F69DA0024653A /* categories */ = {
 			isa = PBXGroup;
 			children = (
 				5221CE011D7F69DA0024653A /* UIViewController+MethodSwizzling.h */,
 				5221CE021D7F69DA0024653A /* UIViewController+MethodSwizzling.m */,
+				52008A0B1D872B4400EBB4C6 /* 动手实现KVO */,
 			);
 			path = categories;
 			sourceTree = "<group>";
@@ -490,11 +508,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				520089601D81FA2A00EBB4C6 /* Test1ViewController.m in Sources */,
+				52008A071D872B0500EBB4C6 /* NSObject+KVO.m in Sources */,
 				522779DA1D7EB984006C9D94 /* ViewController.m in Sources */,
 				522779D71D7EB984006C9D94 /* AppDelegate.m in Sources */,
 				5200895D1D81F5DE00EBB4C6 /* Test2ViewController.m in Sources */,
 				522779D41D7EB984006C9D94 /* main.m in Sources */,
 				5221CE031D7F69DA0024653A /* UIViewController+MethodSwizzling.m in Sources */,
+				52008A0A1D872B2000EBB4C6 /* NSObject+mt_KVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

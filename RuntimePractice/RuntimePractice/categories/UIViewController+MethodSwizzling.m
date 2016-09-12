@@ -95,11 +95,11 @@
     Class UIInputWindowControllerClass = NSClassFromString(@"UIInputWindowController");
     if ([self isKindOfClass:UIInputWindowControllerClass]) {
 //        self.view.backgroundColor=[UIColor whiteColor];
- 
     }else{
     self.view.backgroundColor=[UIColor whiteColor];
     }
-    NSLog(@"viewWillDidload: %@", self);
+//    NSLog(@"viewWillDidload: %@", self);
+    NSLog(@"该控制器的view是:%@",self.view);//UIInputSetContainerView  并不在视图层级上
 
 }
 @end
