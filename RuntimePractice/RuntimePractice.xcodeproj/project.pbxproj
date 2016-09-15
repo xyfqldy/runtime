@@ -12,6 +12,7 @@
 		520089601D81FA2A00EBB4C6 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200895F1D81FA2A00EBB4C6 /* Test1ViewController.m */; };
 		52008A071D872B0500EBB4C6 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52008A061D872B0500EBB4C6 /* NSObject+KVO.m */; };
 		52008A0A1D872B2000EBB4C6 /* NSObject+mt_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 52008A091D872B2000EBB4C6 /* NSObject+mt_KVO.m */; };
+		52008A201D8A712C00EBB4C6 /* MapTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 52008A1F1D8A712C00EBB4C6 /* MapTableVC.m */; };
 		5221CE031D7F69DA0024653A /* UIViewController+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5221CE021D7F69DA0024653A /* UIViewController+MethodSwizzling.m */; };
 		522779D41D7EB984006C9D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522779D31D7EB984006C9D94 /* main.m */; };
 		522779D71D7EB984006C9D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522779D61D7EB984006C9D94 /* AppDelegate.m */; };
@@ -54,6 +55,8 @@
 		52008A061D872B0500EBB4C6 /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		52008A081D872B2000EBB4C6 /* NSObject+mt_KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+mt_KVO.h"; sourceTree = "<group>"; };
 		52008A091D872B2000EBB4C6 /* NSObject+mt_KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+mt_KVO.m"; sourceTree = "<group>"; };
+		52008A1E1D8A712C00EBB4C6 /* MapTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableVC.h; sourceTree = "<group>"; };
+		52008A1F1D8A712C00EBB4C6 /* MapTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableVC.m; sourceTree = "<group>"; };
 		5221CE011D7F69DA0024653A /* UIViewController+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MethodSwizzling.h"; sourceTree = "<group>"; };
 		5221CE021D7F69DA0024653A /* UIViewController+MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MethodSwizzling.m"; sourceTree = "<group>"; };
 		522779CF1D7EB984006C9D94 /* RuntimePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,22 @@
 				52008A061D872B0500EBB4C6 /* NSObject+KVO.m */,
 			);
 			name = "动手实现KVO";
+			sourceTree = "<group>";
+		};
+		52008A211D8AAFC000EBB4C6 /* hashTable&MapTable */ = {
+			isa = PBXGroup;
+			children = (
+				52008A1E1D8A712C00EBB4C6 /* MapTableVC.h */,
+				52008A1F1D8A712C00EBB4C6 /* MapTableVC.m */,
+			);
+			name = "hashTable&MapTable";
+			sourceTree = "<group>";
+		};
+		52008A221D8B261E00EBB4C6 /* 测试weak和assign */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "测试weak和assign";
 			sourceTree = "<group>";
 		};
 		5221CE001D7F69DA0024653A /* categories */ = {
@@ -202,12 +221,14 @@
 		52277A051D7EC4B0006C9D94 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				52DF0A581D8093C00055ADE8 /* test1 */,
+				52DF0A581D8093C00055ADE8 /* 测试methodSwizzling */,
+				52008A211D8AAFC000EBB4C6 /* hashTable&MapTable */,
+				52008A221D8B261E00EBB4C6 /* 测试weak和assign */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		52DF0A581D8093C00055ADE8 /* test1 */ = {
+		52DF0A581D8093C00055ADE8 /* 测试methodSwizzling */ = {
 			isa = PBXGroup;
 			children = (
 				5200895B1D81F5DE00EBB4C6 /* Test2ViewController.h */,
@@ -215,7 +236,7 @@
 				5200895E1D81FA2A00EBB4C6 /* Test1ViewController.h */,
 				5200895F1D81FA2A00EBB4C6 /* Test1ViewController.m */,
 			);
-			name = test1;
+			name = "测试methodSwizzling";
 			sourceTree = "<group>";
 		};
 		D0CA9BA4B6F58BD535B59ABE /* Pods */ = {
@@ -509,6 +530,7 @@
 			files = (
 				520089601D81FA2A00EBB4C6 /* Test1ViewController.m in Sources */,
 				52008A071D872B0500EBB4C6 /* NSObject+KVO.m in Sources */,
+				52008A201D8A712C00EBB4C6 /* MapTableVC.m in Sources */,
 				522779DA1D7EB984006C9D94 /* ViewController.m in Sources */,
 				522779D71D7EB984006C9D94 /* AppDelegate.m in Sources */,
 				5200895D1D81F5DE00EBB4C6 /* Test2ViewController.m in Sources */,

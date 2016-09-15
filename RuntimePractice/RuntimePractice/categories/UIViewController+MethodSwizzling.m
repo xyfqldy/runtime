@@ -91,12 +91,12 @@
 }
 -(void)xxx_viewDidload{
 #pragma mark MTQ:***?????这里多出来了个控制器！！！
-
     Class UIInputWindowControllerClass = NSClassFromString(@"UIInputWindowController");
     if ([self isKindOfClass:UIInputWindowControllerClass]) {
 //        self.view.backgroundColor=[UIColor whiteColor];
     }else{
     self.view.backgroundColor=[UIColor whiteColor];
+
     }
 //    NSLog(@"viewWillDidload: %@", self);
     NSLog(@"该控制器的view是:%@",self.view);//UIInputSetContainerView  并不在视图层级上

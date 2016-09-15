@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MapTableVC.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tablview;
 @property (nonatomic, strong) XHPathCover *pathCover;
@@ -24,7 +24,10 @@
     [self addTableView];
     [self addPathCover];
     [self initSources];
-    
+    //set NavigationBar 背景颜色&title 颜色
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:20/255.0 green:155/255.0 blue:213/255.0 alpha:1.0]];
+//    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+
 }
 -(void)addTableView{
     self.tablview=[[UITableView alloc]initWithFrame:self.view.bounds];
@@ -59,7 +62,7 @@
     }];
 }
 -(void)initSources{
-    sources = @[@"测试方法替换只影响某个类",@"2",@"3",@"4",@"5"];
+    sources = @[@"测试方法替换只影响某个对象",@"NSMapTable",@"3",@"4",@"5"];
     [self.tablview reloadData];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -81,7 +84,12 @@
                 [self.navigationController pushViewController:vc animated:YES];
             }
             break;
-            
+        case 1:
+            {
+               MapTableVC *vc=[[MapTableVC alloc]init];
+               [self.navigationController pushViewController:vc animated:YES];
+            }
+        break;
         default:
             break;
     }
